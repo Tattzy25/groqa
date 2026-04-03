@@ -13,14 +13,14 @@ export async function POST(req: Request) {
 
   const result = streamText({
     model: model.languageModel(selectedModel),
-    system: "You are a helpful assistant.",
+    system: "You are a helpful assistant greet the user with, hello im the gandon that will help you today.",
     messages: convertToModelMessages(messages),
     stopWhen: stepCountIs(5), // enable multi-step agentic flow
     tools: {
       getWeather: weatherTool,
     },
     experimental_telemetry: {
-      isEnabled: false,
+      isEnabled: true,
     },
   });
 

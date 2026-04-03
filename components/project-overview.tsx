@@ -4,12 +4,7 @@ export const ProjectOverview = () => {
     <div className="flex flex-col items-center justify-end">
       <h1 className="text-3xl font-semibold mb-4">Vercel x Groq Chatbot</h1>
       <p className="text-center">
-        This starter project uses <Link href="https://groq.com/">Groq</Link>{" "}
-        with the <Link href="https://sdk.vercel.ai/docs">AI SDK</Link> via the{" "}
-        <Link href="https://vercel.com/marketplace/groq">
-          Vercel Marketplace
-        </Link>
-        .
+        The ultimate chatbot experience powered by Groq and some Gandon AI
       </p>
     </div>
   );
