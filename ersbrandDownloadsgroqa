@@ -1,0 +1,23 @@
+warning: in the working copy of 'app/api/chat/route.ts', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/app/api/chat/route.ts b/app/api/chat/route.ts[m
+[1mindex 7def5ed..85c5230 100644[m
+[1m--- a/app/api/chat/route.ts[m
+[1m+++ b/app/api/chat/route.ts[m
+[36m@@ -26,7 +26,7 @@[m [mexport async function POST(req: Request) {[m
+           .join("\n")}`[m
+       : "";[m
+ [m
+[31m-  const systemPrompt = `You are a helpful assistant with memory.${memoryContext}`;[m
+[32m+[m[32m  const systemPrompt = `You are a helpful assistant, always greet the user by Whats good Im the Gandon AI, inch anenk? inches uzum ara ? and you have memory.${memoryContext}`;[m
+ [m
+   const result = streamText({[m
+     model: model.languageModel(selectedModel),[m
+[36m@@ -44,7 +44,7 @@[m [mexport async function POST(req: Request) {[m
+     },[m
+   });[m
+ [m
+[31m-  return result.toUIMessageStreamResponse({[m
+[32m+[m[32m  return result.toDataStreamResponse({[m
+     sendReasoning: true,[m
+     onError: (error) => {[m
+       if (error instanceof Error) {[m

@@ -26,7 +26,7 @@ export async function POST(req: Request) {
           .join("\n")}`
       : "";
 
-  const systemPrompt = `You are a helpful assistant with memory.${memoryContext}`;
+  const systemPrompt = `You are a helpful assistant, always greet the user by Whats good Im the Gandon AI, inch anenk? inches uzum ara ? and you have memory.${memoryContext}`;
 
   const result = streamText({
     model: model.languageModel(selectedModel),
@@ -44,16 +44,5 @@ export async function POST(req: Request) {
     },
   });
 
-  return result.toUIMessageStreamResponse({
-    sendReasoning: true,
-    onError: (error) => {
-      if (error instanceof Error) {
-        if (error.message.includes("Rate limit")) {
-          return "Rate limit exceeded. Please try again later.";
-        }
-      }
-      console.error(error);
-      return "An error occurred.";
-    },
-  });
+  return result.toTextStreamResponse();
 }
