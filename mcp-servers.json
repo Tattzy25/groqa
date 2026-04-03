@@ -1,0 +1,22 @@
+{
+  "mcp-servers": [
+    {
+      "name": "Neon DB",
+      "url": "https://mcp.neon.tech/mcp",
+      "headers": {
+        "Authorization": "Bearer ${NEON_DB_API_KEY}"
+      }
+    },
+    {
+      "name": "Tigris S3",
+      "url": "https://tigris-s3.mcp-server.com"
+    },
+    {
+      "name": "Replicate",
+      "url": "https://mcp-replicate.vercel.app/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${REPLICATE_API_TOKEN}"
+      }
+    }
+  ]
+}
