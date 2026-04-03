@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@source "../node_modules/streamdown/dist/*.js";
+@source "../node_modules/streamdown";
 
 @plugin "tailwindcss-animate";
 

@@ -13,7 +13,7 @@ const languageModels = {
 };
 
 export const model = customProvider({
-  languageModels,
+  languageModels: languageModels as any,
 });
 
 export type modelID = keyof typeof languageModels;
